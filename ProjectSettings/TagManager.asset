@@ -6,6 +6,14 @@ TagManager:
   tags:
   - Enemy
   - Environment
+  - AIPaths
+  - TP1
+  - TP2
+  - PowerUp
+  - PathInky
+  - PathBlinky
+  - PathPinky
+  - PathClyde
   layers:
   - Default
   - TransparentFX

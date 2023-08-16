@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PuntoChiquito : MonoBehaviour
 {
-    GameObject jugador;
+    Jugador jugadorReferencia;
+    public Collider2D colision;
+    public SpriteRenderer Sprite;
     // Start is called before the first frame update
     void Start()
     {
-        jugador = GameObject.FindGameObjectWithTag("Player");
+        //jugadorReferencia = GameObject.FindGameObjectWithTag("Player").GetComponent<Jugador>();
+        //Sprite = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -17,9 +20,10 @@ public class PuntoChiquito : MonoBehaviour
         
     }
 
-    public void OnTriggerEnter2D(Collider2D Collider){
+    public virtual void OnTriggerEnter2D(Collider2D Collider){
 
         if (Collider.gameObject.CompareTag("Player")) {
-            Destroy(gameObject);}
+            Sprite.enabled = false;
+            colision.enabled = false;}
     }
 }
